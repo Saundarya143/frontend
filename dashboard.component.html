@@ -1,0 +1,98 @@
+<<div class="dashboard-layout">
+
+  <!-- Sidebar -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <h3>Menu</h3>
+      <nav class="sidebar-buttons">
+  <button mat-button routerLink="/users">Users</button>
+  <button mat-button routerLink="/vaccine">Vaccines</button>
+  <button mat-button routerLink="/availability">Availability</button>
+</nav>
+
+    </mat-sidenav>
+
+    <!-- Main Content Area -->
+    <mat-sidenav-content>
+
+      <!-- Header -->
+      <mat-toolbar color="primary" class="header">
+        <span>Admin Dashboard</span>
+      </mat-toolbar>
+
+      <!-- Cards Section -->
+      <div class="cards-grid">
+        <mat-card class="dashboard-card" (click)="navigateTo('users')">
+          <mat-card-header>
+            <mat-icon>people</mat-icon>
+            <mat-card-title>Total Users</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>1540</h2>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="dashboard-card" (click)="navigateTo('availability')">
+          <mat-card-header>
+            <mat-icon>event_available</mat-icon>
+            <mat-card-title>Available Slots</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>320</h2>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="dashboard-card" (click)="navigateTo('bookings')">
+          <mat-card-header>
+            <mat-icon>assignment</mat-icon>
+            <mat-card-title>Total Bookings</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>1275</h2>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="dashboard-card" (click)="navigateTo('vaccine')">
+          <mat-card-header>
+            <mat-icon>vaccines</mat-icon>
+            <mat-card-title>Vaccines in Stock</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>950</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Recent Activity Table -->
+      <mat-card class="activity-card">
+        <mat-card-title>Recent Activity</mat-card-title>
+        <mat-table [dataSource]="recentActivity" class="activity-table">
+
+          <ng-container matColumnDef="user">
+            <mat-header-cell *matHeaderCellDef>User</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.user }}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="vaccine">
+            <mat-header-cell *matHeaderCellDef>Vaccine</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.vaccine }}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="date">
+            <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.date }}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.status }}</mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </mat-card>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

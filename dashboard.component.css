@@ -1,0 +1,72 @@
+.dashboard-layout {
+  height: 100vh;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 220px;
+  background-color: #E3F2FD;
+  padding: 16px;
+}
+
+.sidenav h3 {
+  color: #0D47A1;
+  margin-bottom: 10px;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: #E3F2FD;
+  color: #0D47A1;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.dashboard-card mat-icon {
+  font-size: 36px;
+  color: #007BFF;
+}
+
+.activity-card {
+  margin: 20px;
+  padding: 16px;
+}
+
+.activity-table {
+  width: 100%;
+  margin-top: 10px;
+}
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;  /* Stack vertically */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.sidenav {
+  width: 220px;
+  background-color: #E3F2FD;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
