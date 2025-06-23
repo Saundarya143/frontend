@@ -1,24 +1,25 @@
 <<div class="dashboard-layout">
 
-  <!-- Sidebar -->
+  <!-- Header that spans across the top -->
+  <mat-toolbar class="header full-width-header">
+    <span>Admin Dashboard</span>
+  </mat-toolbar>
+
+  <!-- Sidebar and Content -->
   <mat-sidenav-container class="sidenav-container">
+
+    <!-- Sidebar -->
     <mat-sidenav mode="side" opened class="sidenav">
       <h3>Menu</h3>
       <nav class="sidebar-buttons">
-  <button mat-button routerLink="/users">Users</button>
-  <button mat-button routerLink="/vaccine">Vaccines</button>
-  <button mat-button routerLink="/availability">Availability</button>
-</nav>
-
+        <button mat-button routerLink="/users">Users</button>
+        <button mat-button routerLink="/vaccine">Vaccines</button>
+        <button mat-button routerLink="/availability">Availability</button>
+      </nav>
     </mat-sidenav>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <mat-sidenav-content>
-
-      <!-- Header -->
-      <mat-toolbar color="primary" class="header">
-        <span>Admin Dashboard</span>
-      </mat-toolbar>
 
       <!-- Cards Section -->
       <div class="cards-grid">

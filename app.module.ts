@@ -3,30 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+//import { UserDashboardComponent } from './userdashboad/userdashboad.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    DashboardComponent
+    //UserDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
     MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
     MatCardModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule,
     MatTableModule
+     // Import FormsModule for ngModel
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
