@@ -1,0 +1,59 @@
+.header {
+  position: fixed;
+  background-color: #1976d2;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.dashboard-container {
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+}
+
+.sidenav {
+  width: 240px;
+  background-color: #70b6e9;
+  padding: 10px;
+}
+
+.sidebar-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button.active {
+  background-color: #1976d2 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  gap: 50px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  width: 300px;
+  height: 100px;
+  background-color: #70b6e9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.table-section {
+  margin: 20px;
+}
